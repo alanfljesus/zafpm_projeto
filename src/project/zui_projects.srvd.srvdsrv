@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - AFPM Projects'
+define service ZUI_PROJECTS {
+  expose ZC_PROJECTS;
+}
