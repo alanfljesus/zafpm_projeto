@@ -29,7 +29,7 @@ Este repositório contém o código-fonte do Gerenciador de Projetos desenvolvid
     - **Comentários:** Módulo para adicionar e gerenciar comentários nos tickets.
     - **Notificações:** Módulo para envio de notificações automáticas para a equipe.
     
-### Tecnologias e Ferramentas
+### O que foi usado?
 
 - **SM30**
 - **Module Pool**
