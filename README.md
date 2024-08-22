@@ -1,34 +1,42 @@
-# SAP Gerenciador de Projetos
+# Gerenciador de Projetos SAP
 
-Este repositório contém um Gerenciador de Projetos desenvolvido dentro do SAP, totalmente em ABAP. O projeto abrange funcionalidades para gerenciamento de projetos, equipes, perfis de usuários e tickets, horas trabalhadas, comentários, e notificações.
+Este repositório contém o código-fonte do Gerenciador de Projetos desenvolvido para o ambiente SAP utilizando ABAP. Este sistema permite o gerenciamento de projetos, equipes, tickets, arquivos, apontamento de horas, comentários e notificações, tudo integrado no SAP GUI e Fiori Elements.
+
+## Funcionalidades
+
+- **Gerenciamento de Projetos:** Criação e gerenciamento de projetos, com atribuição de equipes.
+- **Gestão de Equipes:** Associação de usuários SAP a projetos específicos, com perfis personalizados.
+- **Tickets:** Registro e gerenciamento de atividades (tickets) associadas aos projetos.
+- **Arquivos:** Upload e gerenciamento de arquivos relacionados aos tickets.
+- **Horas:** Apontamento de horas trabalhadas pelos usuários em cada ticket.
+- **Comentários:** Adição de comentários em tickets, permitindo o acompanhamento do progresso.
+- **Notificações:** Notificação automática da equipe vinculada ao ticket quando há um novo upload, apontamento de horas ou comentário.
 
 ## Estrutura do Projeto
 
-### Pacotes e Requests
+### Pacotes
 
-A estrutura do projeto é organizada em pacotes principais e módulos específicos:
+- **ZAFPM:** Pacote principal que organiza todos os módulos do projeto.
+  
+  **Módulos - Subpacotes:**
+  - **Cross Application**: Todos os objetos que são utilizados por mais de um módulo.
+  - **Projeto:**
+    - **Equipe:** Gerenciamento das equipes atribuídas a cada projeto.
+    - **Perfil:** Gestão dos perfis dos usuários dentro das equipes.
+  - **Tickets:**
+    - **Arquivos:** Módulo para upload e gestão de arquivos.
+    - **Horas:** Módulo para apontamento e gestão de horas.
+    - **Comentários:** Módulo para adicionar e gerenciar comentários nos tickets.
+    - **Notificações:** Módulo para envio de notificações automáticas para a equipe.
+    
+### Tecnologias e Ferramentas
 
-- **ZAFPM - Principal**: Pacote principal do projeto.
-
-#### Subpacotes
-
-1. **Projeto**:
-   - Gerenciamento de projetos, definição de metas e milestones.
-   - Atribuição de equipes e recursos.
-
-2. **Equipe**:
-   - Gerenciamento de membros da equipe, definição de papéis e responsabilidades.
-
-3. **Perfil**:
-   - Gestão de perfis de usuários, incluindo permissões e acessos.
-
-4. **Tickets**:
-   - Gerenciamento de tarefas e issues no projeto.
-   - Submódulos:
-     - **Arquivos**: Anexar documentos e arquivos relevantes aos tickets.
-     - **Horas**: Registro e monitoramento de horas trabalhadas.
-     - **Comentários**: Comunicação entre a equipe diretamente nos tickets.
-     - **Notificações**: Alertas e notificações automáticas sobre mudanças de status ou outras atualizações importantes.
-
-5. **Cross Application**:
-   - Aplicação que contém objetos e funcionalidades compartilhadas entre os diferentes subpacotes do sistema, permitindo reutilização de código e manutenção simplificada.
+- **SM30**
+- **Module Pool**
+- **Classes ABAP**
+- **Testes Unitários**
+- **Cluster de Visão**
+- **Code Inspector (SCI)**
+- **ALV**
+- **CDS Views**
+- **Fiori Elements**
